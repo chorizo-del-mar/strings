@@ -28,7 +28,7 @@ typedef struct {
 void strings_init(char** s);
 void append(char* s, char value);
 size_t length(char* s); 
-void free_strings(char* s);
+void strings_free(char* s);
 
 #ifdef STRINGS_IMPLEMENTATION
 
@@ -73,7 +73,7 @@ size_t length(char* s) {
 	Header* h = (Header*)s - 1;
 	return h->len;
 }
-void free_strings(char* s) {
+void strings_free(char* s) {
 	if (s == NULL) {
 		return;
 	}

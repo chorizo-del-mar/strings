@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 
 	putchar('\n');
 
-	free_strings(s);
+	strings_free(s);
 
 	return 0;
 }
