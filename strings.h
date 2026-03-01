@@ -25,14 +25,14 @@ typedef struct {
 	size_t capacity;
 }Header;
 
-void strings_init(char** s);
+char* strings_init(void);
 void append(char* s, char value);
 size_t length(char* s); 
 void strings_free(char* s);
 
 #ifdef STRINGS_IMPLEMENTATION
 
-void strings_init(char** s) {
+char* strings_init(void) {
 	Header* h = (Header*)malloc(sizeof(char)*DEFAULT_CAPACITY + sizeof(Header));
 	if (h == NULL) {
 		fprintf(stderr, "append failed to allocate new header");
@@ -41,7 +41,7 @@ void strings_init(char** s) {
 	h->len = 0;
 	h->capacity = DEFAULT_CAPACITY;
 
-	*s = (char*)(h + 1);
+	return (char*)(h + 1);
 
 }
 

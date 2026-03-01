@@ -25,9 +25,7 @@
 #include "strings.h"
 
 int main(int argc, char* argv[]) {
-	char* s = NULL;
-
-	strings_init(&s);
+	char* s = strings_init();
 
 	append(s, 'n');
 	append(s, 'i');
