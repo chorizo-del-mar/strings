@@ -16,6 +16,14 @@
     59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
+/*
+ * This is a single-header-file library that adds meta-data to strings
+ *
+ * To use this library, do this in one C file:
+ * 	#define STRINGS_IMPLEMENTATION
+ * 	#include "strings.h"
+ */
+
 #include <stdlib.h>
 
 #define DEFAULT_CAPACITY 128
