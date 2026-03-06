@@ -64,7 +64,7 @@ void append(char* s, char value) {
 	h = (Header*)s - 1;
 
 	if (h->len == h->capacity) {
-		h = (Header*)realloc(h, sizeof(char)*(h->capacity*2) + sizeof(Header));
+		h = (Header*)realloc(h, sizeof(char)*(h->capacity*h->len) + sizeof(Header));
 		if (h == NULL) {
 			fprintf(stderr, "append failed to reallocate memory");
 			exit(EXIT_FAILURE);
